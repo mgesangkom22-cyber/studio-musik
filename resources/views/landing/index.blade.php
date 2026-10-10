@@ -335,7 +335,7 @@
                         <div class="tool-card">
                             <div class="tool-img-wrapper">
                                 @if($item->foto_alat)
-                                    <img src="{{ asset('uploads/alat/'.$item->foto_alat) }}" class="tool-img" alt="{{ $item->nama_alat }}">
+                                    <img src="{{ asset('uploads/alat/'.rawurlencode($item->foto_alat)) }}" class="tool-img" alt="{{ $item->nama_alat }}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop';">
                                 @else
                                     <div class="d-flex align-items-center justify-content-center h-100 text-muted">
                                         <i class="bi bi-music-note-beamed display-3"></i>

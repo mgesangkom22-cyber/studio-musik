@@ -10,7 +10,7 @@
         <div class="card border-0 shadow-sm text-center p-3" style="border-radius: 18px;">
             <div class="position-relative overflow-hidden rounded-3 mb-3 bg-light d-flex align-items-center justify-content-center" style="height: 320px;">
                 @if($alat->foto_alat)
-                    <img src="{{ asset('uploads/alat/'.$alat->foto_alat) }}" class="img-fluid rounded-3 h-100 w-100" style="object-fit: cover;" alt="{{ $alat->nama_alat }}">
+                    <img src="{{ asset('uploads/alat/'.rawurlencode($alat->foto_alat)) }}" class="img-fluid rounded-3 h-100 w-100" style="object-fit: cover;" alt="{{ $alat->nama_alat }}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop';">
                 @else
                     <div class="text-muted text-center">
                         <i class="bi bi-music-note-beamed display-1"></i>

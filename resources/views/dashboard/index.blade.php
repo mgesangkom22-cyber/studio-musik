@@ -214,7 +214,7 @@
                                 <tr>
                                     <td>
                                         @if($alat->foto_alat)
-                                            <img src="{{ asset('uploads/alat/'.$alat->foto_alat) }}" class="rounded-3" style="width: 45px; height: 45px; object-fit: cover;">
+                                            <img src="{{ asset('uploads/alat/'.rawurlencode($alat->foto_alat)) }}" class="rounded-3" style="width: 45px; height: 45px; object-fit: cover;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop';">
                                         @else
                                             <div class="bg-light rounded-3 d-flex align-items-center justify-content-center text-muted" style="width: 45px; height: 45px;">
                                                 <i class="bi bi-music-note"></i>
